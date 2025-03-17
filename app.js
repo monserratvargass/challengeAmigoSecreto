@@ -41,4 +41,17 @@ function actualizarLista() {
     }
 }
 
+// Función para realizar el sorteo
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Agrega al menos un nombre antes de sortear.");
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSecreto = amigos[indiceAleatorio];
+
+    resultado.textContent = `🎉 El amigo secreto es: ${amigoSecreto}! 🎁`;
+}
+
 
