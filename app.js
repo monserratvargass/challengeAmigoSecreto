@@ -30,4 +30,15 @@ function agregarAmigo() {
     inputNombre.value = "";
 }
 
+// Función para actualizar la lista de amigos
+function actualizarLista() {
+    listaNombres.innerHTML = ""; // Limpiar la lista antes de actualizar
+    
+    for (let amigo of amigos) {
+        const li = document.createElement('li');
+        li.textContent = amigo;
+        listaNombres.appendChild(li);
+    }
+}
+
 
